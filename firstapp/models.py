@@ -18,6 +18,7 @@ class Pizza(models.Model):
     name = models.CharField(max_length=30, verbose_name='Название пиццы')
     short_description = models.CharField(max_length=30, verbose_name='Краткое описание')
     price = models.IntegerField(default=0, verbose_name='Цена')
+    photo = models.ImageField('Фото', upload_to='firstapp/photo', default='', blank=True)
 
     class Meta:
         verbose_name = 'Пицца'
