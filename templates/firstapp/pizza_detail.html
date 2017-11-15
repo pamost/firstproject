@@ -1,0 +1,15 @@
+{% extends 'firstapp/base.html' %}
+
+{% block title %}Пицца {{ pizza.name }}{% endblock %}
+
+{% block page %}
+    <a href="{% url 'home' %}">Главная</a>
+    <div>
+        <h4>{{ pizza.name }}</h4>
+        <div>{{ pizza.short_description }}</div>
+        <div>{{ pizza.price|floatformat:'2'}}</div>
+        {% if pizza.photo %}
+            <div><img src="{{ pizza.photo.url }}" width="200px" height="124px" alt="{{ pizza.name }}"></div>
+        {% endif %}
+    </div>
+{% endblock %}

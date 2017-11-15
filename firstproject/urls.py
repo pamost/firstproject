@@ -23,5 +23,6 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
+    url(r'^(?P<pizza_id>\d+)/$', views.pizza_detail, name='pizza-detail'),
     #url(r'^testapp/', include('testurlapp.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
