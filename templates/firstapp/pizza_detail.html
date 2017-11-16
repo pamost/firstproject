@@ -12,4 +12,9 @@
             <div><img src="{{ pizza.photo.url }}" width="200px" height="124px" alt="{{ pizza.name }}"></div>
         {% endif %}
     </div>
+    <h3>Заказ</h3>
+    <form method="POST">
+        {{ form.as_ul }}
+        <input type="submit" value="Отправить заказ">
+    </form>
 {% endblock %}
