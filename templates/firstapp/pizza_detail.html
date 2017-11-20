@@ -13,8 +13,12 @@
         {% endif %}
     </div>
     <h3>Заказ</h3>
+    {% if sent %}
+        <h2>Ваша заявка принята</h2>
     <form method="POST">
+        {% csrf_token %}
         {{ form.as_ul }}
         <input type="submit" value="Отправить заказ">
     </form>
+    {% endif %}
 {% endblock %}
