@@ -11,5 +11,6 @@ def form_page(request):
             print('Validation success')
             print('Name: ' + form.cleaned_data['name'])
             print('Email: ' + form.cleaned_data['email'])
+            print('VEmail: ' + form.cleaned_data['verify_email'])
             print('Text: ' + form.cleaned_data['text'])
     return render(request, 'validformapp/form_page.html', {'form': form})
