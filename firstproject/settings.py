@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'testurlapp',
     'teststaticapp',
     'validformapp',
+    'authapp',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,5 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     STATICFILE_DIR,
 ]
+
+LOGIN_REDIRECT_URL = '/'
