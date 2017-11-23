@@ -29,6 +29,8 @@ urlpatterns = [
     url(r'authapp/login/$', auth_views.login, {'template_name': 'authapp/login.html'}, name='authapp-login'),
     url(r'authapp/logout/$', auth_views.logout, {'next_page': '/'}, name='authapp-logout'),
     url(r'authapp/$', views.authapp_home, name='authapp-home'),
+    url(r'authapp/sign-up$', views.authapp_sign_up, name='authapp-sign-app'),
+
     # url(r'formpage/', views.form_page, name='form-page'),
     # url(r'^(?P<pizza_id>\d+)/$', views.pizza_detail, name='pizza-detail'),
     # url(r'^testapp/', include('testurlapp.urls')),
